@@ -9,11 +9,12 @@ import { Posts } from '../../components/Posts';
 import { Button } from '../../components/Button';
 import { InputText } from '../../components/InputText';
 
+// todos os hooks
 export const Home = () => {
   const [posts, setPosts] = useState([]);
   const [allPosts, setAllPosts] = useState([]);
   const [page, setPage] = useState(0);
-  const [postsPerPage] = useState(10);
+  const [postsPerPage] = useState(2);
   const [searchValue, setSearchValue] = useState('');
 
   const handleLoadPosts = useCallback(async (page, postsPerPage) => {
@@ -68,7 +69,7 @@ export const Home = () => {
   );
 };
 
-//esse é class, não utiliza muito hoj usa mas o hooks
+//esse é class, não utiliza muito hoje usa mas o hooks
 
 // export class Home extends Component {
 //   //state salva coisas na memoria e manda reder para mostrar na tela

@@ -12,10 +12,17 @@ export const Posts = ({ posts = [] }) => (
   </div>
 );
 
-Posts.defaultProps = {
-  posts: [],
-};
-
+//Posts.defaultProps = {
+//posts: [],
+//};
+//coloca esse de cima ou o de baixo, o de cima não usa muito
 Posts.propTypes = {
-  posts: P.array,
+  posts: P.arrayOf(
+    P.shape({
+      cover: P.string.isRequired,
+      id: P.number.isRequired,
+      title: P.string.isRequired,
+      body: P.string.isRequired,
+    }),
+  ),
 };
